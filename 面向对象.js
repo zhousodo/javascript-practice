@@ -12,6 +12,7 @@ var Student = {
     run: function () {
         console.log(this.name + ' is running...');
     }
+
 };
 
 function createStudent(name) {
@@ -27,3 +28,35 @@ xiaoming.run(); // 小明 is running...
 console.log(xiaoming.__proto__ === Student); // true
 
 //https://www.liaoxuefeng.com/wiki/1022910821149312/1023022043494624
+
+function  Student2(name){
+    this.name = name;
+    this.hello =function(){
+        console.log("hello:" + this.name+"!!!");
+    }
+}
+var x = new Student2("acme")
+console.log(x.name)
+// console.log(x.hello)
+console.log(x.hello())
+console.log(x.constructor ===Student2.prototype.constructor)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
